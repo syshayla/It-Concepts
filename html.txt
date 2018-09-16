@@ -1,0 +1,13 @@
+<!DOCTYP HTML>
+<html>
+	<head>
+		<title> Our First HTML </title>
+	</head>
+	<body>
+			<h1>Hi...How are you? </h1>
+			<script>
+			var msg = "This is my first HTML page!";
+			document.write(msg);
+			</script>
+	</body>
+</html>
