@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 2, 2018, 5:17:11 PM
+    Author     : User
+*/
+#maindiv{
+    width: 100%;
+    min-height:400px;
+        height:100%;
+        background: antiquewhite;
+}
+.row{
+    width: 100%;
+        min-height: 50px;
+        height: auto;
+}
+
+.left{
+    width:30%;
+    height: auto;
+    min-height: 350;
+    background: aqua;
+    float: left;
+       
+}
+.Right{
+    width:70%;
+    height: auto;
+    min-height: 350;
+    background: white;
+    float: left;
+       
+}
