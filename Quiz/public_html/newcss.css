@@ -1,0 +1,53 @@
+#maindiv { height: 500px;
+           width: 80%;
+           background: black;
+           margin: auto;
+    
+}
+.row1{
+    height: 50px;
+    width: 100%;
+    background: lightblue;
+}
+.row2{
+     height: 400px;
+    width: 100%;
+    background: lightcoral;
+    
+}
+.row3{
+     height: 50px;
+    width: 100%;
+    background: lightblue;
+}
+.row4{
+     height: 40px;
+    width: 100%;
+    background: lavender;
+}
+.col1{
+    height: 50px;
+    width: 30%;
+    background: lightskyblue;
+    float: left;    
+}
+.col2{
+    height: 500px;
+    width: 30%;
+    background: tomato;
+    float: left;    
+}
+.col3{
+    height: 50px;
+    width: 70%;
+    background: lightskyblue;
+    float: left;    
+}
+.col4{
+    height: 500px;
+    width: 70%;
+    background: salmon;
+    float: left;    
+}
+
+
