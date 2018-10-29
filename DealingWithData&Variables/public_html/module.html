@@ -1,0 +1,39 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Modulo two decimal place converter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		body {
+		backgroun-color: plum;
+		font-family: verdana;
+		font-weight: bold;
+		}
+		</style>
+        <script language="JavaScript">
+		var dec = .06;
+		var part = 77.4;
+		part += (dec * part);
+		var wholeInt = Math.floor(part);
+		var fraction = Math.round ( part * 100 ) % 100;
+		if ( fraction<10){
+		fraction = "0" + fraction;
+		}
+		var fullVal = wholeInt + "." + fraction;
+		var headTitle = "<h2>Modulo Helper</h2>"
+		var before = "Before conversion=" + part + "<p>";
+		var after = "After conversion=" + fullVal;
+		document.write(headTitle + before + after);
+          
+        </script>
+        
+    </head>
+    <body>
+	<center>
+    </body>
+</html>
