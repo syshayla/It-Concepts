@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body bgcolor="mediumseagreen">
+        <script>
+            var teamJ = "";
+            var teamMember = 0;
+            team:
+                    for (var outCount = 1; outCount < 3; outCount++) {
+                jersey:
+                        for (var inCount = 20; inCount < 35; inCount++) {
+                    if (inCount == 22 || inCount == 29 || inCount == 30)
+                    {
+                        continue jersey;
+
+                    }
+                    if (teamMember == 12) {
+                        teamMember = 0;
+
+                    }
+                    teamMember++;
+                    teamJ += "Team" + outCount + "Member" + teamMember + "Jersey Number" 
+                            + inCount + "<br>";
+
+
+                }
+            }
+            document.write(teamJ);
+        </script>
+    </body>
+</html>
