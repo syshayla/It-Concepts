@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>header</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            body{
+                font-family: verdana;
+            }
+            
+        </style>
+        <script>
+            function message(){
+                parent.data.document.forms[0].elements[0].value="Greetings";
+            }
+        </script>
+    </head>
+    <body bgColor="#ee9caa">
+        <h3>Header</h3>
+        <form>
+            <input type="text">
+            <input type=button value="Redecorate" onclick="message()">
+        </form>
+    </body>
+</html>
