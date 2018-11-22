@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+label{
+	color:red;
+	padding:4px;10px;
+	}</style>
+</head>
+
+<body>
+<form name="myForm">
+Id: <input type="number" name="id" /><label id="demo"></label><br />
+Name: <input type="text" name="fname" /><label id="fnamex"></label><br />
+Gender: <input type="radio" name="gender" value="male" />Male
+<input type="radio" name="gender" value="female" />Female
+
+ <label id="gender"></label><br />
+ Select your Round: <select name="rnd">
+ <option value="Select your round">Select your round</option>
+  <option value="round 39">Round 39</option>
+   </select>
+  <label id="round"></label><br />
+  Complete Module: <input type="checkbox" value="html" name="html" />html
+  <input type="checkbox" value="ppt" name="ppt" />ppt
+  <input type="checkbox" value="cf" name="cf" />cf
+  <label id="module"></label><br />
+
+
+</form>
+<button onclick="validateForm()">Submit</button>
+
+<script>
+var win;
+function validateForm(){
+	var id=document.myForm.id.value;
+	var fname=document.myForm.fname.value;
+	var gender=document.myForm.gender.value;
+	var rnd=document.myForm.rnd.value;
+	var module="";
+	if(document.myForm.html.checked){
+		module+=document.myForm.html.value;
+		}
+		if(document.myForm.ppt.checked){
+		module+=document.myForm.ppt.value;
+		}
+			if(document.myForm.cf.checked){
+		module+=document.myForm.cf.value;
+		}
+	
+	if(id==""){
+		document.getElementById("demo").innerHTML="Id must be filled up";
+		return false;
+		}else{
+			document.getElementById("demo").innerHTML="";
+		}
+			
+	if(fname==""){
+		document.getElementById("fnamex").innerHTML="Name must be filled up!";
+		return false;
+		}else{
+			document.getElementById("fnamex").innerHTML="";
+		}
+			if(gender==""){
+		document.getElementById("gender").innerHTML="Tell me your gender!";
+		return false;
+		}else{
+			document.getElementById("gender").innerHTML="";
+		}
+					
+	if(rnd=="Select your round"){
+		document.getElementById("round").innerHTML="Select your round!";
+		return false;
+		}else{
+			document.getElementById("round").innerHTML="";
+		}
+		
+		if(!document.myForm.html.checked&&!document.myForm.ppt.checked&&!document.myForm.cf.checked){
+			document.getElementById("module").innerHTML="Tell me your module!";
+			return false;
+		}else{
+			document.getElementById("module").innerHTML="";
+
+		
+			win=window.open("","","width=400");
+			win.document.write("<h2><center>Form Output</h2></center><hr>");
+			win.document.write("Id:"+id+"<br>");
+				win.document.write("Name:"+fname+"<br>");
+				win.document.write("Gender:"+gender+"<br>");
+				win.document.write("Gender:"+rnd+"<br>");
+				win.document.write("Completed Module:"+module+"<br>");
+		}
+		}
+</script>
+</body>
+</html>

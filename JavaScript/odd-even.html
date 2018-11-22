@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+ <h1>Print Odd number from 1 - 20 and if get any number divisible by 13, add 500 bonus</h1>
+        <script>
+            var sn = 1;
+            var en = 20;
+            function printOdd(sn, en) {
+                for (sn; sn <= en; sn++) {
+                    if (sn % 2 == 1) {
+                        document.write("odd number: " + sn + "<br/>");
+                    } else {
+                        document.write("even number: " + sn + "<br/>");
+                    }
+                }
+            }
+            printOdd(sn, en);
+            
+        </script>
+</body>
+</html>
