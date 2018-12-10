@@ -1,0 +1,98 @@
+SQL> create table department (dept_id number(10), dept_name varchar2(15)unique);
+
+Table created.
+
+SQL> create sequence dept_seq increment by 10 start with 10 maxvalue 1000 nocache nocycle;
+
+Sequence created.
+
+SQL> insert into department (dept_id, dept_name) values(dept_seq.nextval, 'IT');
+
+1 row created.
+
+SQL> insert into department (dept_id, dept_name) values(dept_seq.nextval, 'Marketing');
+
+1 row created.
+
+SQL> insert into department (dept_id, dept_name) values(dept_seq.nextval, 'Admin');
+
+1 row created.
+
+SQL> ALTER TABLE customers
+  2  ALTER TABLE department (dept_id number(10)primary key, dept_name varchar2(15)unique);
+ALTER TABLE department (dept_id number(10)primary key, dept_name varchar2(15)unique)
+*
+ERROR at line 2:
+ORA-01735: invalid ALTER TABLE option 
+
+
+SQL> select * from department;
+
+   DEPT_ID DEPT_NAME                                                            
+---------- ---------------                                                      
+        10 IT                                                                   
+        20 Marketing                                                            
+        30 Admin                                                                
+
+SQL> grant unlimited tablespace to supervisor;
+
+Grant succeeded.
+
+SQL> create table department (dept_id number(10), dept_name varchar2(15)unique, constraint dept_id_pk primary key (dept_id));
+create table department (dept_id number(10), dept_name varchar2(15)unique, constraint dept_id_pk primary key (dept_id))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> create table department (dept_id number(10)primary key, dept_name varchar2(15)unique);
+create table department (dept_id number(10)primary key, dept_name varchar2(15)unique)
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> drop table department;
+
+Table dropped.
+
+SQL> create table department (dept_id number(10)primary key, dept_name varchar2(15)unique);
+
+Table created.
+
+SQL> create sequence dept_seq increment by 10 start with 10 maxvalue 1000 nocache nocycle;
+create sequence dept_seq increment by 10 start with 10 maxvalue 1000 nocache nocycle
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> drop sequence dept_seq;
+
+Sequence dropped.
+
+SQL> create sequence dept_seq increment by 10 start with 10 maxvalue 1000 nocache nocycle;
+
+Sequence created.
+
+SQL> insert into department (dept_id, dept_name) values(dept_seq.nextval, 'IT');
+
+1 row created.
+
+SQL> insert into department (dept_id, dept_name) values(dept_seq.nextval, 'Marketing');
+
+1 row created.
+
+SQL> insert into department (dept_id, dept_name) values(dept_seq.nextval, 'Admin');
+
+1 row created.
+
+SQL> select * from department;
+
+   DEPT_ID DEPT_NAME                                                            
+---------- ---------------                                                      
+        10 IT                                                                   
+        20 Marketing                                                            
+        30 Admin                                                                
+
+SQL> spool off;
